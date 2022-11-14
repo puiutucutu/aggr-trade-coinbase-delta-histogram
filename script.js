@@ -10,12 +10,6 @@ if (upColor === 0) {
 
 histogram({
     time: time,
-    value: COINBASE:BTC-USDT.vbuy, 
-    color: options.upColor
-})
-    
-histogram({
-    time: time,
-    value: -COINBASE:BTC-USDT.vsell, 
-    color: options.downColor
+    value: COINBASE:BTC-USDT.vbuy - COINBASE:BTC-USDT.vsell, 
+    color: COINBASE:BTC-USDT.vbuy - COINBASE:BTC-USDT.vsell > 0 ? options.upColor : options.downColor
 })
