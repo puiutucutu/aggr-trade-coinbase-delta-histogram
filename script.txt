@@ -1,0 +1,12 @@
+if (upColor === 0) {
+  if (options.showDelta) {
+    upColor = options.upBgColor
+    downColor = options.downBgColor
+  } else {
+    upColor = options.upColor
+    downColor = options.downColor
+  }
+}
+
+plothistogram(COINBASE:BTC-USDT.vbuy, color=options.upColor)
+plothistogram(-COINBASE:BTC-USDT.vsell, color=options.downColor)
