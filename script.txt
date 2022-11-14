@@ -8,5 +8,14 @@ if (upColor === 0) {
   }
 }
 
-plothistogram(COINBASE:BTC-USDT.vbuy, color=options.upColor)
-plothistogram(-COINBASE:BTC-USDT.vsell, color=options.downColor)
+histogram({
+    time: time,
+    value: COINBASE:BTC-USDT.vbuy, 
+    color: options.upColor
+})
+    
+histogram({
+    time: time,
+    value: -COINBASE:BTC-USDT.vsell, 
+    color: options.downColor
+})
